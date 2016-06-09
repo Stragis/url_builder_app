@@ -13,8 +13,8 @@
     events: {
       'app.created': 'onAppCreated',
       '*.changed'  : function(e) {
-        //if (_.contains(this.fieldsToWatch(), e.propertyName))
-          //return this.onAppActivated();
+        if (_.contains(this.fieldsToWatch(), e.propertyName))
+          return this.onAppCreated();
       }
     },
 
